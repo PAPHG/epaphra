@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - SEMAHORO EPAPHRA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+  <div class="container header-container">
+    <div class="header-left">
+      <img src="images/p1.jpg" alt="SEMAHORO EPAPHRA" class="profile-pic">
+    </div>
+
+    <div class="header-center">
+      <h1>SEMAHORO EPAPHRA</h1>
+      <p>PAPHG UG TECH & DEVELOPER</p>
+    </div>
+
+    <div class="header-right">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<section id="about" class="section">
+  <div class="container about-container">
+    
+    <!-- Left: Image -->
+    <div class="about-left">
+      <img src="images/p1.jpg" alt="SEMAHORO EPAPHRA" class="about-pic">
+    </div>
+
+    <!-- Right: Text -->
+    <div class="about-right">
+      <h2>👨‍💻 About Me</h2>
+      <p>
+        Hello! I'm <strong>SEMAHORO EPAPHRA</strong>, a passionate 
+        <strong>Web & System Developer</strong> at 
+        <strong>PAPHG UG Tech</strong>. I specialize in building 
+        responsive websites, interactive web applications, and 
+        system solutions that solve real-world problems.
+      </p>
+      <p>
+        My interests lie in <em>full-stack development, database 
+        management, and problem-solving</em>. I enjoy turning ideas 
+        into practical solutions through code and design.
+      </p>
+      <a href="#projects" class="btn">View My Projects</a>
+    </div>
+  </div>
+</section>
+
+    <section id="skills" class="section">
+  <div class="container">
+    <h2>💻 My Skills</h2>
+    <p class="section-subtitle">I build modern websites, systems and applications using a wide range of technologies including HTML, CSS, JavaScript, PHP, MySQL, 
+      . I also work with frameworks like React and Laravel, use GitHub for version control,
+       and rely on tools such as VS Code, Postman, to deliver scalable and efficient solutions.
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="images/html1.jpg" alt="HTML5">
+        <h3>HTML</h3>
+        <p>Building structured and accessible web pages.</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/css2.jpg" alt="CSS3">
+        <h3>CSS</h3>
+        <p>Designing responsive and visually appealing layouts.</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/jav.jpg" alt="JavaScript">
+        <h3>JavaScript</h3>
+        <p>Adding interactivity and dynamic features to websites.</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/php.jpg" alt="PHP">
+        <h3>PHP</h3>
+        <p>Developing server-side scripts for web applications.</p>
+      </div>
+      <div class="skill-card">
+        <img src="images/web.jpg" alt="MySQL">
+        <h3>MySQL Database</h3>
+        <p>Managing and structuring data for applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2> Projects</h2>
+    <p class="section-subtitle">Some of the projects I’ve worked on include a Hotel Booking Management System, E-commerce Store for online sales, a Supermarket Management System, and my Personal Portfolio Website. 
+      These projects demonstrate my skills in PHP, MySQL, HTML, CSS, and JavaScript, focusing on solving real-world problems, 
+      building responsive user interfaces, and managing data efficiently</p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/sup1.jpg" alt="Supermarket Management System">
+        <h3>Supermarket Management System</h3>
+        <p>A PHP & MySQL-based system to manage inventory, sales, and reports efficiently.</p>
+      </div>
+      <div class="project-card">
+        <img src="images/hhh.jpg" alt="Hotel Booking System">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio website to showcase my skills and projects. Built using HTML, CSS, and JavaScript with a responsive design.</p>
+
+      </div>
+      <div class="project-card">
+        <img src="images/download.jpg" alt="E-commerce Store">
+        <h3>E-commerce Store</h3>
+        <p>An online store prototype with shopping cart and secure checkout simulation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2> Contact Me</h2>
+    <p class="section-subtitle">I’m open to opportunities and collaborations. Feel free to reach out!</p>
+
+    
+
+    <!-- Contact Form -->
+    <form action="db.php" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Optional: Social Links -->
+    <div class="social-links">
+      <a href="https://github.com/PAPHG" target="_blank">GitHub</a>
+      <a href="https://wtitter.com/@semahoroEpaphra" target="_blank">TWITTER</a>
+      <a href="mailto:epaphrasema@gmail.com">Email</a>
+    </div>
+  </div>
+</section>
+
+    <footer>
+        <p>&copy; <?php echo date("Y"); ?> SEMAHORO EPAPHRA - PAPHG UG TECH & DEVELOPER</p>
+    </footer>
+
+    <script>
+        // Simple fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => appearOnScroll.observe(fader));
+    </script>
+</body>
+</html>
